@@ -1,6 +1,5 @@
 "use client";
 import { AI_NAME } from "@/features/theme/theme-config";
-import { signIn } from "next-auth/react";
 import { FC } from "react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
@@ -17,6 +16,10 @@ interface LoginProps {
 }
 
 export const LogIn: FC<LoginProps> = (props) => {
+  const handleAzureLogin = () => {
+    window.location.href = "https://collegechatdemo-webapp-3it5toaaj7nso.azurewebsites.net/.auth/login/aad";
+  };
+
   return (
     <Card className="flex gap-2 flex-col min-w-[300px]">
       <CardHeader className="gap-2">
@@ -31,9 +34,9 @@ export const LogIn: FC<LoginProps> = (props) => {
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <Button onClick={() => signIn("azure-ad")}> Microsoft 365</Button>
+        <Button onClick={handleAzureLogin}> Microsoft 365</Button>
         {props.isDevMode ? (
-          <Button onClick={() => signIn("localdev")}>
+          <Button onClick={() => alert("Dev mode login not available")}>
             Basic Auth (DEV ONLY)
           </Button>
         ) : null}
@@ -41,3 +44,4 @@ export const LogIn: FC<LoginProps> = (props) => {
     </Card>
   );
 };
+

@@ -1,4 +1,4 @@
-import NextAuth, { NextAuthOptions } from "next-auth";
+/*import NextAuth, { NextAuthOptions } from "next-auth";
 import AzureADProvider from "next-auth/providers/azure-ad";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
@@ -111,4 +111,4 @@ export const options: NextAuthOptions = {
   },
 };
 
-export const handlers = NextAuth(options);
+export const handlers = NextAuth(options);*/
