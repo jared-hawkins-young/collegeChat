@@ -1,3 +1,8 @@
-import { handlers } from "@/features/auth-page/auth-api";
-
-export { handlers as GET, handlers as POST };
+export async function GET(request) {
+    return new Response('GET request handled');
+  }
+  
+  export async function POST(request) {
+    return new Response('POST request handled');
+  }
+  
