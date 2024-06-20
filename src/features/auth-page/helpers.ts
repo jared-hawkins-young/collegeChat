@@ -1,4 +1,4 @@
-/*import { createHash } from "crypto";
+import { createHash } from "crypto";
 import { getServerSession } from "next-auth";
 import { RedirectToPage } from "../common/navigation-helpers";
 import { options } from "./auth-api";
@@ -40,7 +40,7 @@ export const hashValue = (value: string): string => {
   return hash.digest("hex");
 };
 
-/*export const redirectIfAuthenticated = async () => {
+export const redirectIfAuthenticated = async () => {
   const user = await userSession();
   if (user) {
     RedirectToPage("chat");
@@ -52,4 +52,4 @@ export type UserModel = {
   image: string;
   email: string;
   isAdmin: boolean;
-};*/
+};
